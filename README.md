@@ -5,5 +5,6 @@ NOrmalize MArkdown.
 ## Install
 
 ```sh
-deno install -Agf -n noma main.ts
+# Install globally with read/write permissions, replacing the existing installation.
+deno install -RWgf -n noma main.ts
 ```
