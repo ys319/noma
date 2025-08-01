@@ -1,9 +1,25 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/bytes@^1.0.5": "1.0.5",
+    "jsr:@std/io@*": "0.225.2",
+    "npm:mdast@*": "3.0.0",
     "npm:remark-parse@*": "11.0.0",
     "npm:remark-stringify@*": "11.0.0",
-    "npm:unified@*": "11.0.5"
+    "npm:remark@*": "15.0.1",
+    "npm:unified@*": "11.0.5",
+    "npm:unist-util-visit@*": "5.0.0"
+  },
+  "jsr": {
+    "@std/bytes@1.0.5": {
+      "integrity": "4465dd739d7963d964c809202ebea6d5c6b8e3829ef25c6a224290fbb8a1021e"
+    },
+    "@std/io@0.225.2": {
+      "integrity": "3c740cd4ee4c082e6cfc86458f47e2ab7cb353dc6234d5e9b1f91a2de5f4d6c7",
+      "dependencies": [
+        "jsr:@std/bytes"
+      ]
+    }
   },
   "npm": {
     "@types/debug@4.1.12": {
@@ -103,6 +119,10 @@
       "dependencies": [
         "@types/mdast"
       ]
+    },
+    "mdast@3.0.0": {
+      "integrity": "sha512-xySmf8g4fPKMeC07jXGz971EkLbWAJ83s4US2Tj9lEdnZ142UP5grN73H1Xd3HzrdbU5o9GYYP/y8F9ZSwLE9g==",
+      "deprecated": true
     },
     "micromark-core-commonmark@2.0.3": {
       "integrity": "sha512-RDBrHEMSxVFLg6xvnXmb1Ayr2WzLAWjeSATAoxwKYJV94TeNavgoIdA0a9ytzDSVzBy2YKFK+emCPOEibLeCrg==",
@@ -290,6 +310,15 @@
       "dependencies": [
         "@types/mdast",
         "mdast-util-to-markdown",
+        "unified"
+      ]
+    },
+    "remark@15.0.1": {
+      "integrity": "sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==",
+      "dependencies": [
+        "@types/mdast",
+        "remark-parse",
+        "remark-stringify",
         "unified"
       ]
     },
